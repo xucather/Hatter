@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HatterActivity">
+
+    <Button
+        android:id="@+id/buttonColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/buttonPicture"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true"
+        android:onClick="onStartColorPicker"
+        android:text="@string/color"
+        android:textColor="#090909"
+        tools:ignore="RtlHardcoded" />
+
+    <CheckBox
+        android:id="@+id/checkFeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/buttonColor"
+        android:layout_alignParentBottom="false"
+        android:layout_toEndOf="@id/buttonColor"
+        android:buttonTint="#FDFCFC"
+        android:minHeight="48dp"
+        android:onClick="onFeather"
+        android:shadowColor="#101010"
+        android:text="@string/feather"
+        android:textColor="#FFFFFF"
+        app:useMaterialThemeColors="false" />
+
+    <Button
+        android:id="@+id/buttonPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonColor"
+        android:layout_alignParentStart="true"
+        android:onClick="onPicture"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/picture"
+        android:textColor="#090909" />
+
+    <Spinner
+        android:id="@+id/spinnerHat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/buttonPicture"
+        android:layout_alignBottom="@id/buttonPicture"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/buttonPicture"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <view
+        android:id="@+id/hatterView"
+        class="edu.msu.catherinemadhatter.HatterView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonPicture"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/black"/>
+</RelativeLayout>
